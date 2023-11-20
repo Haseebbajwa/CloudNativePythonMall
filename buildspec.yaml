@@ -23,7 +23,7 @@ phases:
     commands:
        - docker build -t haseebpython .
        - docker save -o haseebpython.tar haseebpython
- artifacts:
-   files:
-     - 'haseebpython.tar'
-   name: haseebpython
+artifacts:
+  files:
+    - 'haseebpython.tar'
+  name: haseebpython
