@@ -23,15 +23,7 @@ phases:
     commands:
        - docker build -t haseebpython .
        - docker save -o haseebpython.tar haseebpython
-#      - echo "Logging in to Docker Hub"
- #     - echo "ishaatmta6896366" | docker login -u "hasahm" --password-stdin
-
-  #    - echo "Building Docker image"
-   #   - docker build -t hasahm/stefanpython .
-
-    #  - echo "Pushing Docker image to Docker Hub"
-     # - docker push hasahm/stefanpython
  artifacts:
    files:
-     - 'testimage.tar'
-   name: testimage_haseeb
+     - 'haseebpython.tar'
+   name: haseebpython
