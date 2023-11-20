@@ -21,6 +21,15 @@ phases:
     commands:
   build:
     commands:
-      - docker build -t git.systementor.se/yacloud/stefanpython .
-      - docker login -u yacloud -p yacloud1 https://git.systementor.se
-      - docker push git.systementor.se/yacloud/stefanpython 
+      - echo "Logging in to Docker Hub"
+      - echo "ishaatmta6896366" | docker login -u "hasahm" --password-stdin
+
+      - echo "Building Docker image"
+      - docker build -t hasahm/stefanpython .
+
+      - echo "Pushing Docker image to Docker Hub"
+      - docker push hasahm/stefanpython
+# artifacts:
+#   files:
+#     - 'testimage.tar'
+#   name: testimage_haseeb
